@@ -168,7 +168,7 @@ section {
 
 .navbar {
     background: linear-gradient(180deg, rgba(0, 0, 0, .8), rgba(255, 255, 255, .2));
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 3;
     display: inline-flex;
@@ -201,6 +201,23 @@ section {
     display: none;
 }
 
+.navbar-slide {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 60vw;
+    position: fixed;
+    top: 50px;
+    right: 8vw;
+    padding: 10px;
+    padding-bottom: 20px;
+    height: max-content;
+    z-index: 10;
+    justify-content: space-evenly;
+    line-height: 25px;
+    display: none;
+    color: black;
+    text-transform: none;
+}
+
 .main-bar-icon {
     width: 30px;
     height: 30px;
@@ -223,24 +240,19 @@ section {
 .main-bar-item {
     min-width: 100px;
     margin-right: 20px;
-}
-
-.navbar-slide {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 60vw;
-    position: absolute;
-    top: 50px;
-    right: 8vw;
-    padding: 10px;
-    padding-top: 30px;
-    height: 30vh;
-    z-index: 10;
-    justify-content: space-evenly;
+    height: 50px;
+    cursor: pointer;
+    align-self: center;
+    padding-top: 10px;
 }
 
 .navbar-slide .navbar-slide-item {
     justify-content: flex-start;
     align-content: flex-end;
+}
+
+.main-bar-item:hover .navbar-slide {
+    display: flex;
 }
 
 .dot {
@@ -254,13 +266,31 @@ section {
 }
 
 .dot-item {
+    cursor: pointer;
     width: 20px;
     height: 20px;
     background-color: rgb(199, 199, 199);
 }
 
-.dot-item.active {
+
+/* 
+.dot-item:active {
     background-color: green;
+} */
+
+@keyframes dotSlide {
+    from {
+        opacity: .5;
+        background-color: rgb(199, 199, 199);
+    }
+    to {
+        opacity: 1;
+        background-color: green;
+    }
+}
+
+.dot-item {
+    animation: dotSlide 1s infinite linear 2s;
 }
 
 
@@ -547,14 +577,37 @@ section {
     .dot {
         display: none;
     }
+    .logo {
+        left: 0;
+    }
+    .navbar {
+        left: 15vw;
+    }
     .main-bar {
         display: none;
     }
     .main-bar-mobie {
         display: inline-block;
     }
-    .header .line {
+    .main-bar-mobie-slide {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 5vh 20vw;
+        line-height: 50px;
+        font-size: 30px;
+        font-weight: 800;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .main-bar-mobie:hover .header .line {
         width: 50vw;
+    }
+    .main-bar-mobie:hover .main-bar-mobie-slide {
+        display: block;
     }
     .main-bar-icon {}
     .main-bar-item {

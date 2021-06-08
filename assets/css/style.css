@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+
+/*========================================USEABLE========================*/
+
+.container {
+    width: 80vw;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grid {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.grid-item {
+    font-weight: 540;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-green:hover {
+    color: green;
+}
+
+.grid-item-title {
+    text-transform: uppercase;
+}
+
+.grid-sub-item {
+    line-height: 25px;
+    letter-spacing: 5px;
+}
+
+.grid--img {
+    align-self: start;
+    width: 25vw;
+    height: 24vh;
+}
+
+.grid6 {
+    margin-top: 30px;
+    display: flex;
+    align-items: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.grid--img6 {
+    align-self: start;
+    width: 13vw;
+    height: 12vh;
+    margin-left: -20px;
+}
+
+.container_title--l {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    height: 50px;
+}
+
+.container_title--m {
+    margin-top: 20px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container_title--s {
+    margin-top: 0px;
+    height: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+section {
+    width: 100%;
+    display: block;
+}
+
+.clear-fix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn {
+    margin: 30px auto;
+    min-width: 100px;
+    width: 15vw;
+    background-color: #08a250;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    z-index: 20;
+    color: #fff;
+}
+
+.arrow-left,
+.arrow-right {
+    position: relative;
+    top: -200px;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    left: calc(100vw - 50px);
+}
+
+
+/* ==========================================HEADER=======================*/
+
+.header {
+    background-image: url(../imgs/Home_NTNhaviet.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    height: 670px;
+    top: -30px;
+}
+
+.header .line {
+    top: 50px;
+    width: 85vw;
+    left: 5vw;
+}
+
+.bg {
+    background-image: url(../imgs/outer.png);
+    z-index: 2;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.navbar {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .8), rgba(255, 255, 255, .2));
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    right: 0;
+    height: 80px;
+    width: 100vw;
+}
+
+.main-bar {
+    margin-top: 10px;
+    flex-grow: 6;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80vw;
+    margin-left: 400px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.main-bar-mobie {
+    margin-top: 15px;
+    margin-right: 15px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+.main-bar-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.logo {
+    background-image: url(../imgs/logo.jpg);
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    left: 100px;
+    top: 20px;
+}
+
+.nav-bar-search {
+    width: 30px;
+    margin-right: 23px;
+}
+
+.main-bar-item {
+    min-width: 100px;
+    margin-right: 20px;
+}
+
+.navbar-slide {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 60vw;
+    position: absolute;
+    top: 50px;
+    right: 8vw;
+    padding: 10px;
+    padding-top: 30px;
+    height: 30vh;
+    z-index: 10;
+    justify-content: space-evenly;
+}
+
+.navbar-slide .navbar-slide-item {
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+
+.dot {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 650px;
+    height: 20px;
+    width: 150px;
+    z-index: 11;
+}
+
+.dot-item {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(199, 199, 199);
+}
+
+.dot-item.active {
+    background-color: green;
+}
+
+
+/*===============ABOUT=================*/
+
+.about {
+    margin-top: 60px;
+    color: black;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.about__title {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-bottom: 30px;
+}
+
+.green {
+    color: green;
+}
+
+
+/*================== BIET THU==============================================*/
+
+.biet-thu {
+    position: relative;
+}
+
+.biet-thu-bg {
+    z-index: -1;
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    left: 0;
+}
+
+.biet-thu .about__title {
+    padding-top: 100px;
+    width: 100%;
+    z-index: 3;
+    font-size: 40px;
+    color: #fff;
+}
+
+.about-bar {
+    display: inline-flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: center;
+    margin: 0 100px;
+    color: #fff;
+}
+
+.about-bar-item {
+    text-transform: uppercase;
+    min-width: 100px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.about-bar-item::after {
+    content: "|";
+    line-height: 40px;
+    position: relative;
+    left: 10px;
+}
+
+.about-bar-item.last::after {
+    content: "";
+}
+
+.about__title.green {
+    color: green;
+}
+
+.container_title--m.float {
+    position: relative;
+    top: -50px;
+    height: max-content;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .6);
+}
+
+.doi-tac .container {
+    margin: 100px auto;
+}
+
+.visa {
+    margin: auto;
+    width: 320px;
+    height: 20px;
+    position: relative;
+    background-image: url(../imgs/visa.png);
+}
+
+.doi-tac-grid {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+/*==========================FOOTER======================================*/
+
+.footer {
+    padding: 30px 60px;
+    background-image: url(../imgs/footerbg.png);
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    width: 100%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.contact-about.grid-row {
+    justify-content: flex-start;
+}
+
+.contact-about .grid-item-title {
+    text-transform: uppercase;
+}
+
+.contact-about-item {
+    margin-right: 10vw;
+    margin-top: 30px;
+}
+
+.copyright {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    background-color: #09512a;
+}
+
+.line {
+    position: relative;
+    top: 15px;
+    margin: 30px auto;
+    width: 90vw;
+    z-index: 100;
+}
+
+.input-item {
+    width: 100%;
+    display: inline-flex;
+}
+
+.face {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.register {
+    width: 20vw;
+    margin-top: 30px;
+}
+
+.register .grid-item-title {
+    margin-top: 60px;
+}
+
+.input-item {
+    margin-top: 20px;
+}
+
+.register input {
+    width: 300px;
+}
+
+.send {
+    width: 50px;
+    padding: 10px;
+    background-color: rgb(0, 102, 255);
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.social-icon {
+    height: 100px;
+    width: 100%;
+}
+
+.social-icon-item {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*=============RESPONSIVE===================================================*/
+
+@media(max-width:1200px) {
+    .main-bar {
+        margin-left: 0;
+    }
+    .main-bar-item {
+        min-width: 50px;
+        margin-right: 15px;
+        font-size: 80%;
+    }
+    .contact-about-item {
+        margin-right: 5vw;
+    }
+    .header .line {
+        width: 70vw;
+    }
+    .biet-thu .about__title {
+        padding-top: 60px;
+    }
+    .doi-tac .container {
+        margin: 40px auto;
+    }
+    .container_title--l,
+    .container_title--m,
+    .container_title--s {
+        font-size: 90%;
+    }
+    .about__title,
+    .biet-thu .about__title {
+        font-size: 25px;
+    }
+    .about-bar-item {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:890px) {
+    .main-bar-item {
+        min-width: 50px;
+        margin-right: 15px;
+        font-size: 75%;
+    }
+    .biet-thu .about__title {
+        padding-top: 40px;
+    }
+    .doi-tac .container {
+        margin: 20px auto;
+    }
+    .container_title--l,
+    .container_title--m,
+    .container_title--s {
+        font-size: 80%;
+    }
+    .about__title,
+    .biet-thu .about__title {
+        font-size: 20px;
+    }
+    .about-bar-item {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:762px) {
+    .container.grid-column {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+    }
+    .btn {
+        width: 80vw;
+    }
+    .grid-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid {
+        justify-content: center;
+    }
+    .grid--img {
+        align-self: center;
+    }
+    .dot {
+        display: none;
+    }
+    .main-bar {
+        display: none;
+    }
+    .main-bar-mobie {
+        display: inline-block;
+    }
+    .header .line {
+        width: 50vw;
+    }
+    .main-bar-icon {}
+    .main-bar-item {
+        min-width: 50px;
+        margin-right: 15px;
+        font-size: 100%;
+    }
+    .navbar-slide {
+        display: none;
+    }
+    .biet-thu .about__title {
+        padding-top: 40px;
+    }
+    .doi-tac .container {
+        margin: 20px auto;
+    }
+    .container_title--l,
+    .container_title--m,
+    .container_title--s {
+        font-size: 100%;
+    }
+    .about {
+        height: max-content;
+    }
+    .about__title,
+    .biet-thu .about__title {
+        font-size: 25px;
+    }
+    .about-bar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .about-bar-item {
+        font-size: 15px;
+    }
+    .grid--img {
+        align-self: center;
+        width: 40vw;
+        height: 40vh;
+    }
+    .grid6 {
+        margin-top: 30px;
+        display: flex;
+        align-items: space-evenly;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .grid--img6 {
+        align-self: start;
+        width: 25vw;
+        height: 25vh;
+        margin-left: -20px;
+    }
+    .template {
+        margin-top: 60px;
+    }
+    .doi-tac-grid {
+        display: inline-flex;
+        flex-direction: row;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer .line {
+        width: 75vw;
+    }
+    .footer .grid-row {
+        align-items: flex-start;
+    }
+    .register {
+        width: 80vw;
+    }
+}

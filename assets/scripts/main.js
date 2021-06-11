@@ -50,6 +50,10 @@ function handleSlide(mySlides, myDots, numberActive = 1, prev, next) {
         }
     }
     setInterval(function() {
-        showSlides(slideIndex + 1)
+        tempIndex += numberActive;
+        if (tempIndex >= length) {
+            tempIndex = tempIndex - length;
+        }
+        showSlides(slideIndex)
     }, 5000);
 }

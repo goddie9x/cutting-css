@@ -17,6 +17,10 @@ a {
     display: block;
 }
 
+a:active {
+    opacity: .8;
+}
+
 .container {
     width: 80vw;
     position: relative;
@@ -352,6 +356,10 @@ section {
 
 .biet-thu-slide {
     display: none;
+}
+
+.grid--img {
+    animation: dotSlide 0.5s linear;
 }
 
 .biet-thu-slide.active {

@@ -11,6 +11,12 @@ body {
 
 /*========================================USEABLE========================*/
 
+a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
 .container {
     width: 80vw;
     position: relative;
@@ -94,6 +100,7 @@ body {
     height: 30px;
     font-size: 18px;
     font-weight: 600;
+    color: black;
 }
 
 .container_title--s {
@@ -133,37 +140,54 @@ section {
     top: -200px;
 }
 
+.arrow-left:active,
+.arrow-right:active {
+    transform: translate(-2px, -2px);
+}
+
 .arrow-left {
     left: 0;
 }
 
 .arrow-right {
-    left: calc(100vw - 50px);
+    left: calc(95vw - 10px);
 }
 
 
 /* ==========================================HEADER=======================*/
 
 .header {
+    /* 
     background-image: url(../imgs/Home_NTNhaviet.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     z-index: 1;
     position: relative;
     height: 670px;
     top: -30px;
 }
 
-.header .line {
-    top: 50px;
-    width: 85vw;
-    left: 5vw;
+.mySlides {
+    display: none;
+    height: 600px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.bg {
-    background-image: url(../imgs/outer.png);
-    z-index: 2;
-    background-repeat: no-repeat;
-    height: 800px;
+.bg-mark {
+    z-index: 3;
+    position: absolute;
+    height: 600px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.mySlides.active {
+    display: inline-block;
 }
 
 .navbar {
@@ -180,17 +204,16 @@ section {
 }
 
 .main-bar {
-    margin-top: 10px;
+    margin: 30px 60px;
     flex-grow: 6;
     height: 50px;
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 80vw;
-    margin-left: 400px;
     text-transform: uppercase;
     color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .main-bar-mobie {
@@ -205,7 +228,7 @@ section {
     background-color: rgba(255, 255, 255, 0.8);
     width: 60vw;
     position: fixed;
-    top: 50px;
+    top: 80px;
     right: 8vw;
     padding: 10px;
     padding-bottom: 20px;
@@ -272,11 +295,10 @@ section {
     background-color: rgb(199, 199, 199);
 }
 
-
-/* 
-.dot-item:active {
+.dot-item.active {
     background-color: green;
-} */
+    animation: dotSlide 0.5s linear;
+}
 
 @keyframes dotSlide {
     from {
@@ -287,10 +309,6 @@ section {
         opacity: 1;
         background-color: green;
     }
-}
-
-.dot-item {
-    animation: dotSlide 1s infinite linear 2s;
 }
 
 
@@ -330,6 +348,14 @@ section {
     height: 300px;
     width: 100%;
     left: 0;
+}
+
+.biet-thu-slide {
+    display: none;
+}
+
+.biet-thu-slide.active {
+    display: block;
 }
 
 .biet-thu .about__title {
@@ -660,9 +686,6 @@ section {
         width: 25vw;
         height: 25vh;
         margin-left: -20px;
-    }
-    .template {
-        margin-top: 60px;
     }
     .doi-tac-grid {
         display: inline-flex;

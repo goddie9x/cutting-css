@@ -54,6 +54,6 @@ function handleSlide(mySlides, myDots, numberActive = 1, timeNext = 3000, prev, 
         if (tempIndex >= length) {
             tempIndex = tempIndex - length;
         }
-        showSlides(slideIndex)
+        showSlides(tempIndex)
     }, timeNext);
 }

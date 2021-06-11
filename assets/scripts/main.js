@@ -2,9 +2,9 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 handleSlide('.mySlides', '.dot-item');
-handleSlide('.biet-thu-slide', '.dot-none', 3, '.arrow-left', '.arrow-right');
+handleSlide('.biet-thu-slide', '.dot-none', '.arrow-left', '.arrow-right', 3, 3000);
 
-function handleSlide(mySlides, myDots, numberActive = 1, timeNext = 3000, prev, next) {
+function handleSlide(mySlides, myDots, prev, next, numberActive = 1, timeNext = 3000) {
 
     let slideIndex = 0;
     let slides = $$(mySlides);
@@ -50,7 +50,7 @@ function handleSlide(mySlides, myDots, numberActive = 1, timeNext = 3000, prev, 
         }
     }
     setInterval(function() {
-        tempIndex += numberActive;
+        tempIndex = slideIndex + numberActive;
         if (tempIndex >= length) {
             tempIndex = tempIndex - length;
         }

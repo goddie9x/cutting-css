@@ -356,6 +356,7 @@ section {
 
 .biet-thu-slide {
     display: none;
+    text-align: center;
 }
 
 .grid--img {
@@ -607,6 +608,7 @@ section {
     }
     .grid--img {
         align-self: center;
+        width: 100%;
     }
     .dot {
         display: none;
@@ -615,7 +617,7 @@ section {
         left: 0;
     }
     .navbar {
-        left: 15vw;
+        left: 0;
     }
     .main-bar {
         display: none;
@@ -662,6 +664,7 @@ section {
     .container_title--m,
     .container_title--s {
         font-size: 100%;
+        margin: 30px auto;
     }
     .about {
         height: max-content;
@@ -673,14 +676,11 @@ section {
     .about-bar {
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin: -10px 0;
     }
     .about-bar-item {
         font-size: 15px;
-    }
-    .grid--img {
-        align-self: center;
-        width: 40vw;
-        height: 40vh;
+        width: 100%;
     }
     .grid6 {
         margin-top: 30px;

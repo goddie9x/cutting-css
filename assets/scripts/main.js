@@ -4,7 +4,7 @@ const $$ = document.querySelectorAll.bind(document);
 handleSlide('.mySlides', '.dot-item');
 handleSlide('.biet-thu-slide', '.dot-none', 3, '.arrow-left', '.arrow-right');
 
-function handleSlide(mySlides, myDots, numberActive = 1, prev, next) {
+function handleSlide(mySlides, myDots, numberActive = 1, timeNext = 3000, prev, next) {
 
     let slideIndex = 0;
     let slides = $$(mySlides);
@@ -55,5 +55,5 @@ function handleSlide(mySlides, myDots, numberActive = 1, prev, next) {
             tempIndex = tempIndex - length;
         }
         showSlides(slideIndex)
-    }, 5000);
+    }, timeNext);
 }
